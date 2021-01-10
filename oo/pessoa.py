@@ -7,7 +7,11 @@ class Pessoa:
        self.filhos = list(filhos)
 
    def cumprimentar(self):
-       return f'Olá {id(self)}'
+       return f'Olá caras {id(self)}'
+
+    @staticmethod
+    def metodo_estatico():
+        return 42
 
 
 if __name__ == '__main__':
@@ -31,5 +35,6 @@ if __name__ == '__main__':
     print(luciano.olhos)
     print(renzo.olhos)
     print(id(Pessoa.olhos), id(luciano.olhos), id(renzo.olhos))
+    print(Pessoa.metodo_estatico(), luciano.metodo_estatico())
 
 
